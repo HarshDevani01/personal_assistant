@@ -1,235 +1,129 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Devani - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav {
+      margin-top: 8px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #444;
+    }
+    nav a:hover { color: #0070f3; }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #0070f3;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 15px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #0070f3;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn:hover { background: #0056c7; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Harsh Devani</h1>
+    <p>Software Developer | Data Enthusiast | AI Learner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-// Single-file React component portfolio. Tailwind CSS utility classes used.
-// Copy this file into a React app (Vite / Create React App) and ensure Tailwind is configured.
-
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
-      <header className="bg-white shadow">
-        <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-extrabold">Harsh Devani</h1>
-            <p className="text-sm text-gray-600">Software Developer · Data Enthusiast · AI Learner</p>
-          </div>
-          <nav className="space-x-4 text-sm">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#projects" className="hover:underline">Projects</a>
-            <a href="#skills" className="hover:underline">Skills</a>
-            <a href="#experience" className="hover:underline">Experience</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-          </nav>
-        </div>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        {/* Hero / About */}
-        <section id="about" className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold mb-4">Hi — I'm Harsh.</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              I'm a software developer who loves building clean, reliable applications and exploring data-driven
-              solutions. I work with full-stack JavaScript, Python for data tasks, and enjoy learning new
-              techniques in machine learning and AI.
-            </p>
-            <p className="text-gray-700">Here are a few highlights:</p>
-            <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
-              <li>• Full-stack web development (React, Node.js)</li>
-              <li>• Data analysis & ML prototyping with Python</li>
-              <li>• Clean UI/UX and responsive design</li>
-              <li>• Git, CI/CD, and collaborative workflows</li>
-            </ul>
-            <div className="mt-6">
-              <a
-                href="#projects"
-                className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700"
-              >
-                View Projects
-              </a>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow">
-            <div className="w-40 h-40 bg-gradient-to-br from-indigo-200 to-indigo-400 rounded-full mx-auto flex items-center justify-center text-indigo-900 font-bold text-xl">
-              HD
-            </div>
-            <div className="mt-4 text-center">
-              <p className="font-semibold">Harsh Devani</p>
-              <p className="text-sm text-gray-500">Pune, India</p>
-              <div className="mt-3 flex justify-center space-x-3 text-sm">
-                <a href="#contact" className="hover:underline">Email</a>
-                <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:underline">GitHub</a>
-                <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="hover:underline">LinkedIn</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Projects */}
-        <section id="projects" className="mt-12">
-          <h3 className="text-2xl font-bold mb-6">Selected Projects</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/** Project card - duplicate and edit for your projects **/}
-            <article className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold text-lg">1. KNN Titanic Classifier</h4>
-              <p className="text-gray-600 text-sm mt-2">
-                A K-Nearest Neighbors model to predict survival on the Titanic dataset with feature engineering,
-                cross-validation and a simple Flask demo to show predictions.
-              </p>
-              <div className="mt-4 flex items-center justify-between">
-                <div className="text-xs text-gray-500">Python · scikit-learn · Flask</div>
-                <div className="space-x-3">
-                  <a href="#" className="text-sm hover:underline">Code</a>
-                  <a href="#" className="text-sm hover:underline">Live</a>
-                </div>
-              </div>
-            </article>
-
-            <article className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold text-lg">2. Portfolio Website</h4>
-              <p className="text-gray-600 text-sm mt-2">This responsive React + Tailwind portfolio (copy of itself) with dark/light mode and deploy script.</p>
-              <div className="mt-4 flex items-center justify-between">
-                <div className="text-xs text-gray-500">React · Tailwind · Vite</div>
-                <div className="space-x-3">
-                  <a href="#" className="text-sm hover:underline">Code</a>
-                  <a href="#" className="text-sm hover:underline">Live</a>
-                </div>
-              </div>
-            </article>
-
-            <article className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold text-lg">3. PCA / Visualization Tool</h4>
-              <p className="text-gray-600 text-sm mt-2">A small web app that runs PCA on uploaded CSVs and visualizes components interactively.</p>
-              <div className="mt-4 flex items-center justify-between">
-                <div className="text-xs text-gray-500">Python · Plotly · FastAPI</div>
-                <div className="space-x-3">
-                  <a href="#" className="text-sm hover:underline">Code</a>
-                </div>
-              </div>
-            </article>
-
-            <article className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold text-lg">4. Small ML Experiment</h4>
-              <p className="text-gray-600 text-sm mt-2">Experiment exploring hyperparameter tuning and model selection on a classification task.</p>
-              <div className="mt-4 flex items-center justify-between">
-                <div className="text-xs text-gray-500">Python · scikit-learn</div>
-                <div className="space-x-3">
-                  <a href="#" className="text-sm hover:underline">Code</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section id="skills" className="mt-12">
-          <h3 className="text-2xl font-bold mb-6">Skills</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-white p-5 rounded-xl shadow">
-              <h4 className="font-semibold">Languages</h4>
-              <ul className="mt-3 text-gray-700 text-sm">
-                <li>• JavaScript (ES6+)</li>
-                <li>• Python</li>
-                <li>• C++</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl shadow">
-              <h4 className="font-semibold">Frameworks & Tools</h4>
-              <ul className="mt-3 text-gray-700 text-sm">
-                <li>• React, TailwindCSS</li>
-                <li>• Node.js, Express</li>
-                <li>• scikit-learn, pandas, NumPy</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl shadow">
-              <h4 className="font-semibold">Other</h4>
-              <ul className="mt-3 text-gray-700 text-sm">
-                <li>• Git & GitHub</li>
-                <li>• Docker, CI/CD basics</li>
-                <li>• Data visualization</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Experience */}
-        <section id="experience" className="mt-12">
-          <h3 className="text-2xl font-bold mb-6">Experience & Education</h3>
-          <div className="space-y-4">
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h4 className="font-semibold">Intern / Junior Developer</h4>
-                  <p className="text-sm text-gray-600">Company Name — Jun 2024 - Aug 2024</p>
-                </div>
-                <div className="text-sm text-gray-500">Pune, India</div>
-              </div>
-              <p className="mt-3 text-gray-700 text-sm">Worked on front-end features, bug fixes and small API endpoints. Improved test coverage and documentation.</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h4 className="font-semibold">B.Tech Computer Science</h4>
-                  <p className="text-sm text-gray-600">Institute Name — 2020 - 2024</p>
-                </div>
-                <div className="text-sm text-gray-500">GPA: 8.2</div>
-              </div>
-              <p className="mt-3 text-gray-700 text-sm">Relevant coursework: Data Structures, ML, Operating Systems, Databases.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section id="contact" className="mt-12 mb-20">
-          <h3 className="text-2xl font-bold mb-6">Contact</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <p className="text-gray-700">Want to collaborate or have a question? Reach out!</p>
-              <dl className="mt-4 text-sm text-gray-600">
-                <div>
-                  <dt className="font-medium">Email</dt>
-                  <dd>harsh.email@example.com</dd>
-                </div>
-                <div className="mt-2">
-                  <dt className="font-medium">GitHub</dt>
-                  <dd><a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:underline">github.com/yourusername</a></dd>
-                </div>
-                <div className="mt-2">
-                  <dt className="font-medium">LinkedIn</dt>
-                  <dd><a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="hover:underline">linkedin.com/in/yourname</a></dd>
-                </div>
-              </dl>
-            </div>
-
-            <form className="bg-white p-6 rounded-2xl shadow space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Name</label>
-                <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="Your name" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Email</label>
-                <input className="mt-1 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="you@example.com" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Message</label>
-                <textarea className="mt-1 block w-full rounded-md border-gray-200 shadow-sm p-2" rows={4} placeholder="Say hi..." />
-              </div>
-              <div className="text-right">
-                <button className="inline-block px-4 py-2 rounded-md bg-indigo-600 text-white font-medium hover:bg-indigo-700">Send</button>
-              </div>
-            </form>
-          </div>
-        </section>
-      </main>
-
-      <footer className="bg-white border-t">
-        <div className="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-600 text-center">
-          © {new Date().getFullYear()} Harsh Devani • Built with React & Tailwind
-        </div>
-      </footer>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Hi, I’m Harsh 👋. I love building clean applications, analyzing data, and learning new AI/ML techniques.</p>
+      <p>Specializing in web development (React, Node.js) and Python for machine learning.</p>
     </div>
-  );
-}
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>KNN Titanic Classifier</h3>
+      <p>ML model predicting Titanic survival using scikit-learn with Flask web demo.</p>
+      <a href="#" class="btn">View Code</a>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>This personal portfolio built with HTML/CSS/JS.</p>
+      <a href="#" class="btn">View Code</a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li>JavaScript (React, Node.js)</li>
+        <li>Python (pandas, scikit-learn)</li>
+        <li>C++</li>
+        <li>Git, Docker, CI/CD basics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:harsh.email@example.com">harsh.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/" target="_blank">github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/" target="_blank">linkedin.com/in/yourname</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Harsh Devani • Built with HTML, CSS & JS</p>
+  </footer>
+</body>
+</html>
